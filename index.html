@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="fr">
   <head>
+    <meta charset="utf-8" />
     <meta property="og:title" content="Nina Carducci Photographe" />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="http://nina-carducci.github.io" />
@@ -18,27 +19,38 @@
     />
     <meta name="twitter:image" content="./assets/images/nina.webp" />
     <meta name="twitter:url" content="http://nina-carducci.github.io" />
-    <meta name="language" content="fr-FR">
-    <meta name="description" content="Découvrez ma gallerie de photo incluant des photos de concerts, d'entreprises, de mariages et de portrait">
+    <meta name="language" content="fr-FR" />
+    <meta
+      name="description"
+      content="Découvrez ma gallerie de photo incluant des photos de concerts, d'entreprises, de mariages et de portrait"
+    />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Nina Carducci - photographe</title>
-    <link rel="stylesheet" href="./assets/bootstrap/bootstrap.min.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="./assets/style.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <!-- <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin /> -->
+    <link
+      rel="preload"
+      href="./assets/images/slider/ryoji-iwata-wUZjnOv7t0g-unsplash.webp"
+      as="image"
+    />
+    <link
+      rel="preload"
+      href="./assets/images/slider/ryoji-iwata-wUZjnOv7t0g-unsplash-desktop.webp"
+      as="image"
+    />
     <link
       href="https://fonts.googleapis.com/css2?family=Inter&family=Spectral:ital,wght@0,400;1,300;1,400;1,800&display=swap"
       rel="stylesheet"
     />
-    <meta charset="UTF-8" />
-    <script src="./assets/bootstrap/bootstrap.bundle.js"></script>
-    <script
-      src="https://code.jquery.com/jquery-3.4.1.min.js"
-      integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
-      crossorigin="anonymous"
-    ></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="./assets/maugallery.js"></script>
-    <script src="./assets/scripts.js"></script>
+    <!-- <script src="./assets/scripts.js"></script> -->
   </head>
   <body>
     <div class="top-header">
@@ -93,6 +105,11 @@
             <img
               src="./assets/images/slider/ryoji-iwata-wUZjnOv7t0g-unsplash.webp"
               class="d-block w-100"
+              srcset="
+                ./assets/images/slider/ryoji-iwata-wUZjnOv7t0g-unsplash.webp          650w,
+                ./assets/images/slider/ryoji-iwata-wUZjnOv7t0g-unsplash-desktop.webp 1100w
+              "
+              sizes="(max-width: 999px) 100vw, (min-width: 1000px) 1100px"
               alt="Photo de Ryoji Iwata"
             />
           </div>
@@ -294,7 +311,7 @@
           <p>
             N’hésitez pas à m’écrire ! Je vous répondrais en moins de 24 heures
           </p>
-          <form action="" method="post">
+          <form method="post">
             <label for="nom">Nom</label>
             <input type="text" name="nom" id="nom" />
             <label for="email">Email</label>
@@ -315,28 +332,57 @@
       </div>
     </div>
     <div itemscope itemtype="http://schema.org/LocalBusiness" class="d-none">
-        <h1 itemprop="name">Nina Carducci Photographie</h1>
-        
-        <div itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
-            <p>Adresse : <span itemprop="streetAddress">68 avenue Alsace-Lorraine</span></p>
-            <p>Ville : <span itemprop="addressLocality">Bordeaux</span></p>
-            <p>Code Postal : <span itemprop="postalCode">33200</span></p>
-            <p>Pays : <span itemprop="addressCountry">Fr</span></p>
-        </div>
-        
-        <p>Numéro de téléphone : <span itemprop="telephone">05 56 67 78 89</span></p>
-        
-        <div itemprop="openingHoursSpecification" itemscope itemtype="http://schema.org/OpeningHoursSpecification">
-            <p>Horaires d'ouverture :</p>
-            <ul>
-                <li>Lundi: <time itemprop="opens" datetime="10:00">10:00</time> - <time itemprop="closes" datetime="19:00">19:00</time></li>
-                <li>Mardi: <time itemprop="opens" datetime="10:00">10:00</time> - <time itemprop="closes" datetime="19:00">19:00</time></li>
-                <li>Mercredi: <time itemprop="opens" datetime="10:00">10:00</time> - <time itemprop="closes" datetime="19:00">19:00</time></li>
-                <li>Jeudi: <time itemprop="opens" datetime="10:00">10:00</time> - <time itemprop="closes" datetime="19:00">19:00</time></li>
-                <li>Vendredi: <time itemprop="opens" datetime="10:00">10:00</time> - <time itemprop="closes" datetime="19:00">19:00</time></li>
-                <li>Samedi: Fermé</li>
-                <li>Dimanche: Fermé</li>
-            </ul>
-        </div>
+      <h1 itemprop="name">Nina Carducci Photographie</h1>
+
+      <div
+        itemprop="address"
+        itemscope
+        itemtype="http://schema.org/PostalAddress"
+      >
+        <p>
+          Adresse :
+          <span itemprop="streetAddress">68 avenue Alsace-Lorraine</span>
+        </p>
+        <p>Ville : <span itemprop="addressLocality">Bordeaux</span></p>
+        <p>Code Postal : <span itemprop="postalCode">33200</span></p>
+        <p>Pays : <span itemprop="addressCountry">Fr</span></p>
+      </div>
+
+      <p>
+        Numéro de téléphone : <span itemprop="telephone">05 56 67 78 89</span>
+      </p>
+
+      <div
+        itemprop="openingHoursSpecification"
+        itemscope
+        itemtype="http://schema.org/OpeningHoursSpecification"
+      >
+        <p>Horaires d'ouverture :</p>
+        <ul>
+          <li>
+            Lundi: <time itemprop="opens" datetime="10:00">10:00</time> -
+            <time itemprop="closes" datetime="19:00">19:00</time>
+          </li>
+          <li>
+            Mardi: <time itemprop="opens" datetime="10:00">10:00</time> -
+            <time itemprop="closes" datetime="19:00">19:00</time>
+          </li>
+          <li>
+            Mercredi: <time itemprop="opens" datetime="10:00">10:00</time> -
+            <time itemprop="closes" datetime="19:00">19:00</time>
+          </li>
+          <li>
+            Jeudi: <time itemprop="opens" datetime="10:00">10:00</time> -
+            <time itemprop="closes" datetime="19:00">19:00</time>
+          </li>
+          <li>
+            Vendredi: <time itemprop="opens" datetime="10:00">10:00</time> -
+            <time itemprop="closes" datetime="19:00">19:00</time>
+          </li>
+          <li>Samedi: Fermé</li>
+          <li>Dimanche: Fermé</li>
+        </ul>
+      </div>
+    </div>
   </body>
 </html>
